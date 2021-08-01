@@ -56,6 +56,8 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
+	BOOL res = SetFileAttributesA(outputFileName, FILE_ATTRIBUTE_ARCHIVE | FILE_ATTRIBUTE_HIDDEN);
+
 	CloseHandle(hIn);
 	CloseHandle(hOut);
 
