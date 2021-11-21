@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 			currentLineNumber++;
 
 			if (result.size()) {
-				printf_s("«¿œ»—‹ —“–Œ »: ");
+				printf_s("ÒÚÓÍ‡ ");
 				puts(result.c_str());
 
 				WriteFile(hOut, result.c_str(), result.size(), NULL, NULL);
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	BOOL res = SetFileAttributesA(outputFileName, FILE_ATTRIBUTE_ENCRYPTED | FILE_ATTRIBUTE_ARCHIVE);
+	BOOL res = SetFileAttributesA(outputFileName, FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN);
 
 	CloseHandle(hIn);
 	CloseHandle(hOut);
